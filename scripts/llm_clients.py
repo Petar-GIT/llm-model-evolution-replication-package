@@ -237,7 +237,7 @@ class QwenClient(LLMClient):
                     stop=stop_token,
                 )
 
-                # 🔴 Handle broken / empty responses
+                # Handle broken / empty responses
                 if not result or not result.choices:
                     LOGGER.warning(f"Qwen attempt {attempt+1}: no choices returned, retrying...")
                     time.sleep(0.2)
@@ -248,13 +248,13 @@ class QwenClient(LLMClient):
 
                 completion_string = result.choices[0].message.content or ""
 
-                # 🔴 Handle empty output
+                # Handle empty output
                 if not completion_string.strip():
                     LOGGER.warning(f"Qwen attempt {attempt+1}: empty output, retrying...")
                     time.sleep(0.2)
                     continue
 
-                # 🧹 Cleanup (same as other clients)
+                # Cleanup (same as other clients)
                 completion_string = completion_string.replace("```json", "")
                 completion_string = completion_string.replace("```", "")
                 completion_string = completion_string.strip()
