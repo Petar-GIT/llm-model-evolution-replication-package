@@ -2,6 +2,16 @@
 Replication Package for the thesis:  
 **"Do LLMs Improve in Modelling Tasks With Their Evolution? An Empirical Study"**
 
+
+## Reproducing Thesis Results
+
+1. Install dependencies using `requirements.txt`
+2. Configure API keys as environment variables
+3. Run the LLM pipeline to generate outputs
+4. Run the evaluation pipeline to compute metrics
+5. Compare generated CSV outputs with the included evaluation results
+
+
 ## Overview of the Package
 
 ### datasets
@@ -86,6 +96,8 @@ Supported variables include:
 - `DEEPSEEK_AZURE_API_KEY`
 
 The corresponding endpoints must also be configured where applicable.
+
+
 
 ## Notes
 
