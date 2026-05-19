@@ -75,6 +75,18 @@ python scripts\LLM_runner.py <provider> <model_id> <dataset> <output_file> SINGL
 python scripts\LLM_runner.py openai gpt-5.2 synthetic_plus_custom.jsonl results_synthetic_plus_custom_gpt52.jsonl SINGLE_EDGE
 ```
 
+## API Key Configuration
+
+The replication package expects API keys to be provided through environment variables.
+
+Supported variables include:
+- `AZURE_OPENAI_API_KEY`
+- `GOOGLE_API_KEY`
+- `OPENROUTER_API_KEY`
+- `DEEPSEEK_AZURE_API_KEY`
+
+The corresponding endpoints must also be configured where applicable.
+
 ## Notes
 
 - API keys are not included in this replication package.
